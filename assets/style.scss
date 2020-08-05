@@ -3,7 +3,26 @@
 ---
 @charset "utf-8";
 
-// Import partials from `sass_dir` and set theme here
+// Color variables
+$black: #181818;
+$white: #fff;
+$gray: #777;
+$yellow: #fec92e;
+
+
+// Config
+$color-background: $white !default;
+$color-accent: $yellow !default;
+$color-border: $black !default;
+$color-body-text: $black !default;
+$color-text-accent: $gray !default;
+
+
+// Import sass partials (used in all themes)
 @import
-        "theme-{{ site.theme_color | default: "black" }}.scss"
+        "variables",
+        "base",
+        "components",
+        "utilities",
+        "fonts"
 ;

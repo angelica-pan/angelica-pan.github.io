@@ -11,7 +11,6 @@ github_username:  angelica-pan
 
 # Build settings
 #remote_theme: broccolini/swiss
-theme_color: custom
 markdown: kramdown
 plugins:
   - jekyll-feed
