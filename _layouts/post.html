@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="container mx-auto px-2 mt-2 mb-4" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="h0 py-3 mt-3">{{ page.title }}</h1>
+  </header>
+
+  <div class="clearfix mb-4 py-1">
+    <div class="col-12 sm-width-full left border-top-thin py-3">
+    </div>
+    <div class="col-5 left prose">
+      {{ content }}
+      <i><a href='/projects'>Back</a></i>
+    </div>
+    <div class="col-7 left mb-1">
+      <iframe src="{{ page.related_file }}" width="550px" height="500px">
+        <p> 
+        <a href="{{ page.related_file }}">
+        Fallback link for browsers that don't support iframes
+        </a>
+        </p>  
+      </iframe>
+    </div>
+
+  </div>
+</article>
+
+
