@@ -35,22 +35,15 @@ h1 {
 }
 
 /* Border utilities */
-.border-bottom-thick { border-bottom: 2px solid; border-color: currentColor; }
-.border-bottom-thin { border-bottom: 1px solid; border-color: currentColor; }
-.border-top-thick { border-top: 2px solid; border-color: currentColor; }
-.border-top-thin { border-top: 1px solid; border-color: currentColor; }
-.border-0 { border: 0; }
+.header-border { border-bottom: 2px solid; border-color: $color-border; }
+.border { border-top: 1px solid; border-color: $color-border; }
 
 
 /* Theme color utilities */
 .header-background { background-color: $color-background; }
-.header-test { background-color: $color-nav-link-home; }
-.header-border { border-color: $color-foreground; }
-.header-title { color: $color-title; }
-.header-text { color: $color-foreground; }
-.header-social { fill: $color-foreground; }
-.header-social-accent { fill: $color-dot-accent; }
-.header-link:hover { color: $color-nav-link-home !important; } // used for navigation links on homepage
+.header-title { color: $color-body-text; }
+.header-text { color: $color-body-text; }
+.header-link:hover { color: $color-background !important; } // used for navigation links on homepage
 .text-accent { color: $color-text-accent; } // used for date in post list and home link
 
 /* Layout utilities */
@@ -164,17 +157,6 @@ h1 {
   .ml-lg-4 { margin-left: $spacer-4; }
 }
 
-// Link styles for social icons
-.link-social {
-  text-decoration: none;
-  font-weight: bold;
-  line-height: 1;
-
-  &:hover {
-    text-decoration: none !important;
-  }
-}
-
 // Link styles for navigation on home page
 .link-primary-home {
   font-weight: bold;
@@ -182,7 +164,7 @@ h1 {
   text-decoration: none !important;
 
   &:hover {
-    color: $color-nav-link-home;
+    color: $color-accent; //yellow
     text-decoration: none !important;
   }
 }
@@ -194,7 +176,7 @@ h1 {
   text-decoration: none !important;
 
   &:hover {
-    color: $color-nav-link;
+    color: $color-accent; //yellow
     text-decoration: none !important;
   }
 }
@@ -215,7 +197,7 @@ h1 {
 }
 
 .project-button{
-  background-color: $color-nav-link;
+  background-color: $color-accent; //yellow
   border: none;
   border-radius: 8px;
   padding-top: $spacer-1;
@@ -229,8 +211,8 @@ h1 {
   margin: 0 auto;
 
   &:hover {
-    background-color: $color-code;
-    color: $color-nav-link-home; //white
+    background-color: $color-text-accent; //grey
+    color: $color-background; //white
   }
 
 }

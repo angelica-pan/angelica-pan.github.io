@@ -8,17 +8,11 @@ $yellow: #fec92e;
 
 
 // Config
-$color-background: $yellow !default;
-$color-dot-accent: $yellow !default;
-$color-foreground: $black !default;
-$color-title: $black !default;
+$color-background: $white !default;
+$color-accent: $yellow !default;
+$color-border: $black !default;
 $color-body-text: $black !default;
 $color-text-accent: $gray !default;
-$color-code: $gray !default;
-$color-nav-link-home: $white !default;
-$color-nav-link: $yellow !default;
-$color-primary-link: $gray !default;
-$color-border: $white;
 
 
 // Import sass partials (used in all themes)
