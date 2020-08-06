@@ -8,22 +8,34 @@ layout: default
   </header>
 
   <div class="clearfix mb-4 py-1">
-    <div class="col-12 sm-width-full left border py-3">
-    </div>
-    <div class="col-5 left prose">
-      {{ content }}
-      <i><a href='/projects'>Back</a></i>
-    </div>
-    <div class="col-7 left mb-1">
-      <iframe src="{{ page.related_file }}" width="550px" height="500px">
-        <p> 
-        <a href="{{ page.related_file }}">
-        Fallback link for browsers that don't support iframes
-        </a>
-        </p>  
-      </iframe>
-    </div>
+    <div class="col-12 sm-width-full left border py-3 prose">
+        {{ content }}
 
+        <i><a href='/portfolio'>Back</a></i>
+        
+        <div class="centering-container prose">
+          <a target="_blank" href="{{ page.related_file}}" class = "project-button">
+            Click to open file in a new tab
+          </a>
+        </div>
+        
+        <br>
+        
+        {% if page.related_file_type == "html" %}
+        <div class="html-container">
+        {% else %}
+        <div class="pdf-container">
+        {% endif %}
+          <iframe class="preview" src="{{ page.related_file }}">
+            <p> 
+            <a href="{{ page.related_file }}">
+            Fallback link for browsers that don't support iframes
+            </a>
+            </p>  
+          </iframe>
+        </div>
+
+    </div>
   </div>
 </article>
 
