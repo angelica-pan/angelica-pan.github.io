@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Hi! I'm Angelica. My background is in computational linguistics and psycholinguistics, 
   and my most recent position was as the lab manager of the UCLA Language Processing Lab. 
   I'm looking to transition from academia into the tech industry and technical writing. 
-baseurl: / # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: angelica-pan.github.io  # the base hostname & protocol for your site, e.g. http://example.com
 # repository: anpan/angelica-pan.github.io
 github_username:  angelica-pan
