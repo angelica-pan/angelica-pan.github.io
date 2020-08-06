@@ -12,7 +12,7 @@
 <meta name="author" content="Angelica Pan" />
 
 
-<title>Tidyverse Data Manipulation Quickstart Guide</title>
+<title>Tidyverse Data Manipulation Quickstart</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1540,14 +1540,14 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Tidyverse Data Manipulation Quickstart Guide</h1>
+<h1 class="title toc-ignore">Tidyverse Data Manipulation Quickstart</h1>
 <h4 class="author">Angelica Pan</h4>
 
 </div>
 
 
 <p><strong>Goal</strong>: Learn how to manipulate tibbles, the tidyverse version of data frames, using the <strong>dplyr</strong> package</p>
-<p><strong>Prerequisites</strong>: You should be familiar with these aspects of R: console, packages, functions, data frames, vectors, data types (logical, numeric, character). It is helpful, but not necessary, to have previous programming experience.</p>
+<p><strong>Prerequisites</strong>: You should be familiar with these aspects of R: <a href="https://support.rstudio.com/hc/en-us/articles/200404846-Working-in-the-Console">console</a>, <a href="https://www.datacamp.com/community/tutorials/r-packages-guide">packages</a>, <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/data.frame">data frames</a>, and <a href="https://r4ds.had.co.nz/vectors.html">vectors</a>. It is helpful, but not necessary, to have previous programming experience.</p>
 <div id="introduction" class="section level1" number="1">
 <h1 number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>The tidyverse is a collection of R packages designed for data science. The tidyverse packages use the same grammar and data structures, making it easy to combine functions from different packages.</p>
@@ -1572,8 +1572,8 @@ div.tocify {
 <p>There are two types of code blocks in this guide.</p>
 <pre class="r"><code># This is an example of R code.
 1 + 2</code></pre>
-<pre><code>## # This is an example of output.
-## [1] 3</code></pre>
+<pre><code># This is an example of output.
+3</code></pre>
 <p>The first type of block, with a gray background, is R code. You can copy and run such code blocks in the console of your R editor. You can also download the <a href="quickstart-companion.R">quickstart-companion R script</a>, which contains all of the R code in this guide.</p>
 <p>The second type of block, with a white background, is the output of running whatever R code is above it.</p>
 </div>
@@ -1597,7 +1597,7 @@ library(nycflights13)</code></pre>
 <p>A tibble is stricter than a <code>data.frame</code>. For example, subsetting a tibble always returns another tibble. In comparison, subsetting a <code>data.frame</code> sometimes returns a <code>data.frame</code> and sometimes returns a <code>vector</code>.</p>
 <p>This guide uses the terms “tibble” and “data frame” interchangeably.</p>
 <blockquote>
-<p>Learn more about tibbles by running <code>vignette(&quot;tibble&quot;)</code> in your console, or reading the <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">CRAN documentation on tibbles</a>.</p>
+<p>Learn more about tibbles by running <code>vignette(&quot;tibble&quot;)</code> in your console, or by reading the <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">CRAN documentation on tibbles</a>.</p>
 </blockquote>
 <div id="printing-a-tibble" class="section level2" number="3.1">
 <h2 number="3.1"><span class="header-section-number">3.1</span> Printing a tibble</h2>
@@ -1657,8 +1657,8 @@ flights_modified &lt;- some_dplyr_function(flights, argument2, argument3)</code>
 <h2 number="4.1"><span class="header-section-number">4.1</span> Select columns with <code>select()</code></h2>
 <p><code>select()</code> subsets a data frame by columns.</p>
 <ul>
-<li>First argument: data frame</li>
-<li>Subsequent arguments: column names</li>
+<li>First argument: tibble (<code>tbl.df</code>)</li>
+<li>Subsequent arguments: column names without quotation marks</li>
 </ul>
 <p>Columns that are explicitly named are kept, and all other columns are dropped.</p>
 <div id="examples-of-select" class="section level3" number="4.1.1">
@@ -1815,8 +1815,8 @@ Click for Answer
 <h2 number="4.2"><span class="header-section-number">4.2</span> Filter rows with <code>filter()</code></h2>
 <p><code>filter()</code> subsets a data frame by rows.</p>
 <ul>
-<li>First argument: data frame</li>
-<li>Subsequent arguments: logical predicates.</li>
+<li>First argument: tibble (<code>tbl.df</code>)</li>
+<li>Subsequent arguments: logical predicates</li>
 </ul>
 <p>The comparison operators <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>!=</code>, and <code>==</code> create predicates, and the logical operators <code>&amp;</code> (AND), <code>|</code> (OR), and <code>!</code> (NOT) join predicates.</p>
 <p>Rows where the predicate evaluates to <code>TRUE</code> are kept, and all other rows are dropped.</p>
@@ -1935,7 +1935,7 @@ Click for Answer
 <h2 number="4.3"><span class="header-section-number">4.3</span> Create new columns with <code>mutate()</code></h2>
 <p><code>mutate()</code> creates new columns or modifies existing columns.</p>
 <ul>
-<li>First argument: data frame</li>
+<li>First argument: tibble (<code>tbl.df</code>)</li>
 <li>Subsequent arguments: expressions of the form <code>col_name = col_value</code>.</li>
 </ul>
 <p>If a column with the name <code>col_name</code> does not exist, then a new column is added to the end of the data frame. Its name is <code>col_name</code>, and its values are determined by <code>col_value</code>.</p>
@@ -2095,8 +2095,8 @@ Click for Answer
 <h2 number="4.4"><span class="header-section-number">4.4</span> Reorder rows with <code>arrange()</code></h2>
 <p><code>arrange()</code> reorders the rows of a data frame.</p>
 <ul>
-<li>First argument: data frame</li>
-<li>Subsequent arguments: column names</li>
+<li>First argument: tibble (<code>tbl.df</code>)</li>
+<li>Subsequent arguments: column names without quotation marks</li>
 </ul>
 <p>Values in an argument column are sorted in ascending order by default. Wrap a column name in <code>desc()</code> to sort in descending order.</p>
 <div id="examples-of-arrange" class="section level3" number="4.4.1">
@@ -2145,8 +2145,8 @@ arrange(flights, desc(dep_delay))</code></pre>
 <h2 number="4.5"><span class="header-section-number">4.5</span> Summarize data frames with <code>summarize()</code></h2>
 <p><code>summarize()</code> summarizes a data frame into a single row.</p>
 <ul>
-<li>First argument: data frame</li>
-<li>Subsequent arguments: expressions of the form <code>col_name = summary_function</code></li>
+<li>First argument: tibble (<code>tbl.df</code>)</li>
+<li>Subsequent arguments: expressions of the form <code>col_name = summary_function()</code></li>
 </ul>
 <p>Examples of summary functions:</p>
 <ul>
@@ -2177,8 +2177,8 @@ summarize(flights, unique_dep_times = n_distinct(dep_time, na.rm = TRUE))</code>
 <h2 number="4.6"><span class="header-section-number">4.6</span> Group a data frame with <code>group_by()</code></h2>
 <p><code>group_by()</code> groups a data frame by row values.</p>
 <ul>
-<li>First argument: data frame</li>
-<li>Subsequent argument: column names</li>
+<li>First argument: tibble (<code>tbl.df</code>)</li>
+<li>Subsequent argument: column names without quotation marks</li>
 </ul>
 <p><code>group_by()</code> does not change the row order of a data frame, so it may seem that calling <code>group_by()</code> has no effect. However, a grouped data frame’s meta data header displays the groups and their count.</p>
 <p>The function <code>ungroup(df)</code> removes the groups of a grouped data frame <code>df</code>.</p>
