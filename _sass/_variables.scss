@@ -1,8 +1,3 @@
-// // Font family
-// $body-font-family: "Helvetica Neue", Arial, sans-serif;
-// $body-font-size: 16px;
-// $prose-font-size: 20px;
-
 // Import Computer Modern Fonts
 @import "fonts";
 $body-font-family: "Computer Modern";
@@ -12,9 +7,10 @@ $prose-font-size: 20px;
 
 // Type scale
 $h0-mobile: 64px;
-// $h0-desktop: 128px;
-// size of title
 $h0-desktop: 96px;
+
+$navigation-mobile: 32px;
+$navigation-desktop: 40px;
 
 $h1-size: 40px !default;
 $h2-size: 32px !default;

@@ -10,6 +10,14 @@
   }
 }
 
+.nav-size {
+  font-size: $navigation-mobile;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $navigation-desktop;
+  }
+}
+
 h1 {
   margin-top: 0;
 }
@@ -172,7 +180,7 @@ h1 {
 // Link styles for navigation on other pages
 .link-primary {
   font-weight: bold;
-  font-size: $h1-size;
+  // font-size: $h1-size;
   text-decoration: none !important;
 
   &:hover {
