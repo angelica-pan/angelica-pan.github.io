@@ -1554,7 +1554,7 @@ div.tocify {
 </div>
 <div id="rc" class="section level1" number="2">
 <h1 number="2"><span class="header-section-number">2</span> <code>RC</code></h1>
-<p><code>RC</code> is an eye tracking while reading experiment conducted at UCLA. Data was collected by an <a href="https://www.sr-research.com/eyelink-1000-plus/#TowerMount">SR Eyelink 1000 Tower Mount</a> and preprocessed with <a href="https://blogs.umass.edu/eyelab/software/">EyeDry</a>.</p>
+<p><code>RC</code> is an eye tracking while reading experiment conducted at the <a href="http://processing.linguistics.ucla.edu/">UCLA Language Processing Lab</a> by <a href="https://angelica-pan.com/">Angelica Pan</a> and supervised by <a href="https://jesseharris.netlify.app/">Jesse Harris</a>. Data was collected by an <a href="https://www.sr-research.com/eyelink-1000-plus/#TowerMount">SR Eyelink 1000 Tower Mount</a> and preprocessed with <a href="https://blogs.umass.edu/eyelab/software/">EyeDry</a>.</p>
 <div id="eye-tracking-while-reading" class="section level2" number="2.1">
 <h2 number="2.1"><span class="header-section-number">2.1</span> Eye tracking while reading</h2>
 <p>In an eye tracking while reading experiment, subjects read text that is displayed on a computer screen. As they read, a high speed camera records their eye movements. Eye tracking while reading is a popular method for studying sentence processing because certain eye movement patterns, such as long fixations on difficult sentence structures, have been linked to cognitive effort.</p>
@@ -1651,7 +1651,10 @@ div.tocify {
 <p>This section uses <strong>dplyr</strong> functions to manipulate first pass time time data from the <code>RC</code> experiment. For a review on <strong>dplyr</strong>, read the <a href="/quickstart.html">Tidyverse Data Manipulation Quickstart</a>.</p>
 <div id="ixs-files" class="section level2" number="3.1">
 <h2 number="3.1"><span class="header-section-number">3.1</span> <code>.ixs</code> files</h2>
-<p>The first pass (fp) time data is contained within <a href="./fp-rcs.ixs"><code>fp-rcs.ixs</code></a> and <a href="./fp-rco.ixs"><code>fp-rco.ixs</code></a>. They are comma-delimited files in which the first row contains the column names.</p>
+<p>The first pass (fp) time data is contained within <code>fp-rcs.ixs</code> and <code>fp-rco.ixs</code>. They are comma-delimited files in which the first row contains the column names.</p>
+<blockquote>
+<p>The full <code>.ixs</code> files that appear in this guide are currently not available to the public.</p>
+</blockquote>
 <p>First 8 lines of <code>fp-rcs.ixs</code>:</p>
 <pre><code>seq,subj,item,cond,region,datum
 26,1,1,5,1,318
@@ -2101,10 +2104,10 @@ fp &lt;- bind_rows(fp_rcs, fp_rco) %&gt;%
 </ul>
 <p>The data for each eye tracking metric is contained in a pair of <code>&lt;metric&gt;-rcs.ixs</code> and <code>&lt;metrix&gt;-rco.ixs</code> files that must be read in and transformed like the first pass times data:</p>
 <ul>
-<li><a href="./rb-rcs.ixs"><code>rb-rcs.ixs</code></a>: right-bounded times data for <em>SUB</em> items</li>
-<li><a href="./rb-rco.ixs"><code>rb-rco.ixs</code></a>: right-bounded times data for <strong>OBJ</strong> items</li>
-<li><a href="./sp-rcs.ixs"><code>sp-rcs.ixs</code></a>: second pass times data for <em>SUB</em> items</li>
-<li><a href="./sp-rco.ixs"><code>sp-rco.ixs</code></a>: second pass times data for <strong>OBJ</strong> items</li>
+<li><code>rb-rcs.ixs</code>: right-bounded times data for <em>SUB</em> items</li>
+<li><code>rb-rco.ixs</code>: right-bounded times data for <strong>OBJ</strong> items</li>
+<li><code>sp-rcs.ixs</code>: second pass times data for <em>SUB</em> items</li>
+<li><code>sp-rco.ixs</code>: second pass times data for <strong>OBJ</strong> items</li>
 </ul>
 <p>It would be redundant and error-prone to copy-and-paste the <strong>dplyr</strong> manipulations for every eye tracking metric.</p>
 <p>Instead, define a function like <code>combine_sub_obj()</code>:</p>
