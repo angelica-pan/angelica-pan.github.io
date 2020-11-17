@@ -14,9 +14,9 @@ You can compare [my (in-progress) version]({{site.baseurl}}/pcibex){:target="_bl
 
 
 **Major changes**
-+ Created a new website with permanent navigation sidebar.
-+ Reorganized layout to make elements and commands easier to find
-+ Created a "Core Concepts" section (reference-based introduction) and the "Basic and Advanced Tutorials" (task-based introduction).
++ Created a new Jekyll website to transition from original WordPress website.
++ Reorganized layout to make elements and commands easier to find.
++ Restructed [user documentation](https://www.pcibex.net/wiki/00-overview/){:target="_blank"} into a task-oriented manual (["Core Concepts"]({{site.baseurl}}/pcibex/docs/core-concepts){:target="_blank"}) and project-based tutorials (["Basic Tutorial"]({{site.baseurl}}/pcibex/docs/basic-tutorial){:target="_blank"} and ["Advanced Tutorial"]({{site.baseurl}}/pcibex/docs/advanced-tutorial){:target="_blank"}).
 + Added an ["Internal documentation"]({{site.baseurl}}/pcibex/internal/internal-documentation){:target="_blank"} section for future contributors.
 
 ### Tools used
