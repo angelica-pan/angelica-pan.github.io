@@ -1,21 +1,30 @@
-<header class="header-border px-2 clearfix">
-    <div class="col-12 mx-auto">
-    <ul class="list-reset mt-lg-1 mb-2 mb-lg-1 right">
-      {% for my_page in site.pages %}
-        {% if my_page.related_file %}
-        <li class="inline-block">
-          <a class="align-middle nav-size link-primary mr-2 mr-lg-0 ml-lg-2" target="_blank" rel="noopener" href="{{ site.url }}{{ my_page.related_file }}">
-            {{ my_page.title }}
-          </a>
-        </li>
-        {% else %}
-        <li class="inline-block">
-          <a class="align-middle nav-size link-primary mr-2 mr-lg-0 ml-lg-2" href="{{ site.url }}{{ my_page.url }}">
-            {{ my_page.title }}
-          </a>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-</header>
+<div class="container-full">
+  <!-- begin header -->
+  <header class="header">
+    <nav class="main-nav">
+      <span class="main-nav__open">menu</span>
+      <div class="main-nav__box">
+        <span class="main-nav__close">Close</span>
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="{{site.baseurl}}/" class="nav__link {%if page.url == '/' %} active{% endif %}"><b>Home</b></a>
+          </li>
+          {% for item in site.pages %}
+            {% unless item.name == 'tags.html' or item.name == '404.html' %}
+            {% if item.title %}
+            <li class="nav__item">
+              {% if item.open_new_tab %}
+                <a href="{{ item.open_new_tab | prepend: site.baseurl }}" target="_blank" class="nav__link">{{ item.title }}</a>
+              {% else %}
+                <a href="{{ item.url | prepend: site.baseurl }}" class="nav__link {%if item.url == page.url %} active{% endif %}">{{ item.title }}</a>
+              {% endif %}
+            </li>
+            {% endif %}
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- end header -->
+</div>

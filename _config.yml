@@ -1,23 +1,73 @@
 title: Angelica Pan
-email: angelica.s.pan@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Hi! I'm Angelica. My background is in computational linguistics and psycholinguistics.
-  I also have experience in event planning and teaching, and my most recent position was 
-  as the lab manager of the UCLA Language Processing Lab. I'm looking to transition from 
-  academia into the tech industry and technical writing. 
-baseurl: "/" # the subpath of your site, e.g. /blog
+description: Aspiring technical writer.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://angelica-pan.com" # the base hostname & protocol for your site, e.g. http://example.com
-# repository: anpan/angelica-pan.github.io
-github_username:  angelica-pan
+
+# Author Settings
+author:
+  name: Angelica Pan
+  image: '/assets/img/profile.png'
+  job: Aspiring Technical Writer
+  bio: Hi! I'm Angelica. My background is in computational linguistics and psycholinguistics. My most recent position was as the lab manager of the UCLA Language Processing Lab. I'm looking to transition from academia into technical writing.
+  email: angelica.s.pan@gmail.com
+
+# Contact links
+# contact:
+#   - name: Twitter
+#     link: https://twitter.com/
+#   - name: Facebook
+#     link: https://facebook.com/
+#   - name: Instagram
+#     link: https://instagram.com/
+
+
+# Comment Section (Disqus)
+# disqus-identifier: mr-brown # add your shortname for Disqus Comment. For example mr-brown
+
+# Google Analytics
+# google-analytics: # add your identifier. For example UA-99631805-1.
 
 # Build settings
-#remote_theme: broccolini/swiss
 markdown: kramdown
+permalink: pretty
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll/tagging
+  
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
 
-# projects
+include:
+  - _pages
+
+# portfolio collection
 collections:
-  projects:
+  portfolio:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:name/
+    order:
+      - pcibex.md
+      - handout.md
+      - quickstart.md
+      - practical.md
+
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag-page
+tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

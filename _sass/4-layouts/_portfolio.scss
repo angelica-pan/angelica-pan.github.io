@@ -1,0 +1,37 @@
+.portfolio-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $sp-8;
+  margin-bottom: $sp-8;
+}
+
+.portfolio-thumbnail{
+  height: 150px;
+  width: 150px;
+}
+
+.portfolio-border{
+  border-radius: 50%; 
+  border: 2px dashed $primary-color;
+}
+
+.portfolio-item:hover .portfolio-thumbnail {
+  opacity: 0.6;
+}
+
+.portfolio-text{
+  width: 450px;
+  margin-left: $sp-8;
+}
+
+.portfolio-preview-container{
+  position: relative; 
+}
+
+.portfolio-preview{
+  margin-top: $sp-6;
+  width: 100%; 
+  height: 600px; 
+  // border: 1px dashed grey;
+}

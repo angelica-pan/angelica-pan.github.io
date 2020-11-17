@@ -1,0 +1,32 @@
+// sans serif regular
+@font-face {
+    font-family: "Computer Modern";
+    src: 
+        url('fonts/cmunss-webfont.ttf') format("truetype");
+}
+
+// sans serif bold
+@font-face {
+    font-family: "Computer Modern";
+    src: 
+        url('fonts/cmunsx-webfont.ttf') format("truetype");
+        font-weight: bold;
+}
+
+// sans serif bold italic
+@font-face {
+    font-family: "Computer Modern";
+    src:
+        url('fonts/cmunbxo-webfont.ttf') format("truetype");
+        font-weight: bold;
+        font-style: italic;
+        
+}
+
+// sans serif italic
+@font-face {
+    font-family: "Computer Modern";
+    src: 
+        url('fonts/cmunsi-webfont.ttf') format("truetype");
+        font-style: italic;
+}

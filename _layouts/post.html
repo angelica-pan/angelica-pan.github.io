@@ -2,42 +2,83 @@
 layout: default
 ---
 
-<article class="container mx-auto px-2 mt-2 mb-4" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 class="h0 py-3 mt-3">{{ page.title }}</h1>
-  </header>
+{% if page.parent %}
+  {% for item in site.pages %}
+    {% if item.title == "Portfolio" %}
+      {% assign parent_url = item.url %}
+    {% endif %}
+  {% endfor %}
+  <nav class="breadcrumb-nav">
+    <div class="breadcrumb-nav-item"><a href="{{ parent_url }}">{{ page.parent }}</a></div>
+    <div class="breadcrumb-nav-item"> / </div>
+    <div class="breadcrumb-nav-item"><span>{{ page.title }}</span></div>
+  </nav>
+{% endif %}
 
-  <div class="clearfix mb-4 py-1">
-    <div class="col-12 sm-width-full left border py-3"></div>
-      <div class="col-12 centering-container">
-        <div class="col-11 prose">
-          {{ content}}
+<div class="container">
+  <!-- begin post -->
+  <article class="post">
+    <div class="post__head" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+      <h1 class="post__title">{{ page.title | escape }}</h1>
+      {% if page.image %}
+      <div class="post-image img-blur" style="background-image: url({{site.baseurl}}{{page.image}})"></div>
+      {% endif %}
+    </div>
 
-          <i><a href='/portfolio'>Back</a></i>
+    <div class="post__content" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
+      {{ content }}
+    </div>
 
-        <div class="mt-2 centering-container prose">
-          <a target="_blank" href="{{ page.related_file}}" class = "project-button">
-            Click to open file in a new tab
-          </a>
+    {% if page.related_file %}
+    
+    <div class="portfolio-preview-container" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
+      <div class="author__more"><a href="{{ page.related_file | prepend: site.baseurl }}" class="say-hello" target="_blank">Click to open in a new tab</a></div> 
+      <iframe class="portfolio-preview" src="{{ page.related_file }}"  {% if page.related_html %}style="border: 1px dashed grey;"{% endif%}>
+        <a href="{{ page.related_file }}">
+        Fallback link for browsers that don't support iframes
+        </a>
+      </iframe>
+    </div>
+    {% endif %}
+
+    {% if page.tags.size >= 1 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag }}" class="post-tags__tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="post__navigation">
+      {% if page.previous.url %}
+      <a class="prev" href="{{site.baseurl}}{{page.previous.url}}">
+        <div class="prev__post-icon">
+          <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m352 128.4-32.3-32.4-159.7 160 159.7 160 32.3-32.4-127.3-127.6z"/></svg>
         </div>
-        
-        <br>
-        
-        {% if page.related_file_type == "html" %}
-        <div class="html-container">
-        {% else %}
-        <div class="pdf-container">
-        {% endif %}
-          <iframe class="preview" src="{{ page.related_file }}">
-            <p> 
-            <a href="{{ page.related_file }}">
-            Fallback link for browsers that don't support iframes
-            </a>
-            </p>  
-          </iframe>
+        <span class="post__nav-wrapper">
+          <div class="post__nav-image" style="background-image: url({{site.baseurl}}{{page.previous.image}})"></div>
+          <h2 class="post__nav-title"><time style="color: white;">previous</time> <br>{{page.previous.title}}</h2>
+        </span>
+      </a>
+      {% endif %}
+
+      {% if page.next.url %}
+      <a class="next" href="{{site.baseurl}}{{page.next.url}}">
+        <div class="next__post-icon">
+          <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m160 128.4 32.3-32.4 159.7 160-159.7 160-32.3-32.4 127.3-127.6z"/></svg>
         </div>
-      </div>
-  </div>
-</article>
+        <span class="post__nav-wrapper">
+          <div class="post__nav-image" style="background-image: url({{site.baseurl}}{{page.next.image}})"></div>
+          <h2 class="post__nav-title"><time style="color: white;">next</time> <br>{{page.next.title}}</h2>
+        </span>
+      </a>
+      {% endif %}
+    </div>
 
+    {% if site.disqus-identifier %}
+      {% include show-disqus.html %}
+    {% endif %}
 
+  </article>
+  <!-- end post -->
+</div>
