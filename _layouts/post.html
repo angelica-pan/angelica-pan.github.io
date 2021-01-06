@@ -19,9 +19,11 @@ layout: default
   <!-- begin post -->
   <article class="post">
     <div class="post__head" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
-      <h1 class="post__title">{{ page.title | escape }}</h1>
-      {% if page.image %}
-      <div class="post-image img-blur" style="background-image: url({{site.baseurl}}{{page.image}})"></div>
+      <h1 class="post__title">{{ page.title }}</h1>
+      {% if page.thumbnail %}
+        <div class="portfolio-thumbnail" style="margin: auto;">
+          <img src="{{ page.thumbnail | prepend: site.baseurl }}" alt="{{ page.title }}" class="portfolio-border">
+        </div>
       {% endif %}
     </div>
 
