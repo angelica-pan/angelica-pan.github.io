@@ -16,6 +16,7 @@ Gemfile.lock
 .DS_Store
 *.swp
 *~
+.markdownlint.json
 
 # Folders
 /vendor

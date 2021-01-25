@@ -8,18 +8,44 @@ blurb: Documentation for PCIbex, an open-source online experiment builder.
 
 ## Description
 
-I'm currently developing a new website for [PCIbex](https://www.pcibex.net/){:target="_blank"}, an open-source online experiment builder. I'm a big fan of PCIbex — I used it to develop experiments when I was the lab manager at the UCLA Processing Lab — and thought it would be a fun project to refactor its documentation.
+I'm currently developing a new website for
+[PCIbex](https://www.pcibex.net/){:target="_blank"},
+an open-source online experiment builder. I'm a big fan of PCIbex — I used it to
+develop experiments when I was the lab manager at the UCLA Processing Lab — and
+thought it would be a fun project to refactor its documentation.
 
-Compare [my (in-progress) version]({{site.baseurl}}/pcibex){:target="_blank"} with the [current version](https://www.pcibex.net/documentation/){:target="_blank"}, and check out its GitHub repository [here](https://github.com/angelica-pan/pcibex){:target="_blank"}.
+Compare
+[my (in-progress) version]({{site.baseurl}}/pcibex){:target="_blank"}
+with the
+[current version](https://www.pcibex.net/documentation/){:target="_blank"},
+and check out its GitHub repository
+[here](https://github.com/angelica-pan/pcibex){:target="_blank"}.
 
 ## Highlights
 
-+ Created a new Jekyll website to transition from original WordPress website.
-+ Redesigned layout to make navigation easier.
-+ Refactored [user documentation](https://www.pcibex.net/wiki/00-overview/){:target="_blank"} into a task-oriented manual (["Core Concepts"]({{site.baseurl}}/pcibex/core-concepts){:target="_blank"}) and project-based tutorials (["Basic Tutorial"]({{site.baseurl}}/pcibex/basic-tutorial){:target="_blank"} and ["Advanced Tutorial"]({{site.baseurl}}/pcibex/docs/advanced-tutorial){:target="_blank"}).
-+ Designed a new, consistent [set of element icons]({{site.baseurl}}/pcibex/elements){:target="_blank"} (see the old icons [here](https://www.pcibex.net/reference/){:target="_blank"}).
-+ Wrote [templates](https://github.com/angelica-pan/pcibex/tree/master/_layouts){:target="_blank"} to keep posts consistent, and to make adding new elements and commands easier.
-+ Added an ["Internal documentation"]({{site.baseurl}}/pcibex/internal/internal-documentation){:target="_blank"} section for future contributors.
++ Designed and developed a new Jekyll and GitHub Pages website to replace
+original WordPress website (in progress).
++ Redesigned layout to improve navigation.
+  + Added sidebar with permanent, easy-to-access links to important sections.
+  + Separated sections like "Elements" and "Commands" into different pages to
+  reduce information density and increase readability.
+  + Designed a
+  [new set of element icons]({{site.baseurl}}/pcibex/elements){:target="_blank"}
+  to replace the
+  [old, visually inconsistent icons](https://www.pcibex.net/reference/){:target="_blank"}.
++ Refactored
+[user documentation](https://www.pcibex.net/wiki/00-overview/){:target="_blank"}
+into a task-oriented manual
+(["Core Concepts"]({{site.baseurl}}/pcibex/core-concepts){:target="_blank"})
+and project-based tutorials (["Basic Tutorial"]({{site.baseurl}}/pcibex/basic-tutorial){:target="_blank"}
+and
+["Advanced Tutorial"]({{site.baseurl}}/pcibex/docs/advanced-tutorial){:target="_blank"}).
++ Wrote [templates](https://github.com/angelica-pan/pcibex/tree/master/_layouts){:target="_blank"}
+to keep posts consistent, and to make adding new elements and commands easier.
++ Started an
+["Internal documentation"]({{site.baseurl}}/pcibex/internal/internal-documentation){:target="_blank"}
+section for future contributors.
++ Found bugs and submitted bug reports when testing beta versions of PCIbex.
 
 ## Tools used
 
