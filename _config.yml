@@ -1,5 +1,5 @@
 title: Angelica Pan
-description: Aspiring technical writer.
+description: Technical Writer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://angelica-pan.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -7,8 +7,8 @@ url: "http://angelica-pan.com" # the base hostname & protocol for your site, e.g
 author:
   name: Angelica Pan
   image: '/assets/img/profile.png'
-  job: Aspiring Technical Writer
-  bio: Hi! I'm Angelica. My background is in computational linguistics and psycholinguistics, and I was most recently the lab manager of the UCLA Language Processing Lab. I'm looking to transition from academia into technical writing.
+  job: Technical Writer
+  bio: Technical Writer at <a href="https://wandb.ai/site" target="_blank">Weights & Biases</a>
   email: angelica.s.pan@gmail.com
 
 # Contact links
