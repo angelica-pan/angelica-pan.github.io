@@ -4,27 +4,23 @@ title: PCIbex
 parent: Portfolio
 thumbnail: /assets/img/pcibex.png
 blurb: Documentation for PCIbex, an open-source online experiment builder.
+date: January 2021
 ---
 
 ## Description
 
-I'm currently developing a new website for
+I worked on the documentation for 
 [PCIbex](https://www.pcibex.net/){:target="_blank"},
 an open-source online experiment builder. I'm a big fan of PCIbex — I used it to
 develop experiments when I was the lab manager at the UCLA Processing Lab — and
-thought it would be a fun project to refactor its documentation.
+I volunteered to refactor its documentation.
 
-Compare
-[my (in-progress) version]({{site.baseurl}}/pcibex){:target="_blank"}
-with the
-[current version](https://www.pcibex.net/documentation/){:target="_blank"},
-and check out its GitHub repository
-[here](https://github.com/angelica-pan/pcibex){:target="_blank"}.
+Here's <a href="{{site.baseurl}}/pcibex" class="say-hello" target="_blank">the version I handed over</a> vs. <a href="https://www.pcibex.net/documentation/" class="say-hello" target="_blank">the original version</a>
 
 ## Highlights
 
 + Designed and developed a new Jekyll and GitHub Pages website to replace
-original WordPress website (in progress).
+original WordPress website.
 + Redesigned layout to improve navigation.
   + Added sidebar with permanent, easy-to-access links to important sections.
   + Separated sections like "Elements" and "Commands" into different pages to
@@ -46,7 +42,3 @@ to keep posts consistent, and to make adding new elements and commands easier.
 ["Internal documentation"]({{site.baseurl}}/pcibex/internal/internal-documentation){:target="_blank"}
 section for future contributors.
 + Found bugs and submitted bug reports when testing beta versions of PCIbex.
-
-## Tools used
-
-HTML, CSS, Liquid, Jekyll, GitHub Pages
