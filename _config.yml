@@ -53,9 +53,9 @@ collections:
       - ml-models.md
       - dance-diffusion.md
       - pcibex.md
-      - quickstart.md
-      - practical.md
-      - handout.md
+      - tidyverse-quickstart.md
+      - tidyverse-practical.md
+      - syntax-handout.md
 
 # Tags
 tag_page_dir:         tag
