@@ -20,8 +20,9 @@ layout: default
   <article class="post">
     <div class="post__head" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
       <h1 class="post__title">{{ page.title }}</h1>
+      <h5 class="post__date" style="margin-bottom: 20px"><i>{{ page.date | date: "%B %Y" }}</i></h5>
       {% if page.thumbnail %}
-        <div class="portfolio-thumbnail" style="margin: auto;">
+        <div class="portfolio-thumbnail" style="margin: auto">
           <img src="{{ page.thumbnail | prepend: site.baseurl }}" alt="{{ page.title }}" class="portfolio-border">
         </div>
       {% endif %}
@@ -32,14 +33,21 @@ layout: default
     </div>
 
     {% if page.related_file %}
-    
-    <div class="portfolio-preview-container" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
+    <div class="portfolio-preview-container" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
       <div class="author__more"><a href="{{ page.related_file | prepend: site.baseurl }}" class="say-hello" target="_blank">Click to open in a new tab</a></div> 
       <iframe class="portfolio-preview" src="{{ page.related_file }}"  {% if page.related_html %}style="border: 1px dashed grey;"{% endif%}>
         <a href="{{ page.related_file }}">
         Fallback link for browsers that don't support iframes
         </a>
       </iframe>
+    </div>
+    {% endif %}
+
+    {% if page.related_link %}
+    <div class="portfolio-preview-container" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+      <div class="author__more">
+        <a href="{{ page.related_link }}" class="say-hello" target="_blank">Click to open link in a new tab</a>
+      </div> 
     </div>
     {% endif %}
 

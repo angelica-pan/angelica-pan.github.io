@@ -5,7 +5,8 @@ parent: Portfolio
 thumbnail: /assets/img/practical-tidyverse.png
 related_file: /assets/html/practical-tidyverse.html
 related_html: true
-blurb: Practical examples of data science in the tidyverse.
+blurb: Practical examples of the R tidyverse package
+date: January 2020
 ---
 
 ## Description
@@ -15,7 +16,3 @@ Language Processing Lab. It follows the
 [Tidyverse Quickstart](/portfolio/tidyverse-quickstart),
 and provides readers with practical examples of using tidyverse packages and
 user-defined functions to analyze a psycholinguistic experiment.
-
-## Tools used
-
-R, R Markdown

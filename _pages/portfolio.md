@@ -12,7 +12,8 @@ permalink: /portfolio/
       <img src="{{ item.thumbnail | prepend: site.baseurl }}" alt="{{ item.title }}" class="portfolio-border">
     </div>
     <div class="portfolio-text">
-      <h2 class="no-margin"><b>{{item.title}}</b></h2>
+      <h2 class="portfolio-title"><b>{{ item.title }}</b></h2>
+      <h5 class="post__date"><i>{{ item.date | date: "%B %Y" }}</i></h5>
       <p>{{ item.blurb }}</p>
     </div>
   </div>

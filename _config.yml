@@ -7,8 +7,8 @@ url: "http://angelica-pan.com" # the base hostname & protocol for your site, e.g
 author:
   name: Angelica Pan
   image: '/assets/img/profile.png'
-  job: Technical Writer
-  bio: Technical Writer at <a href="https://wandb.ai/site" target="_blank">Weights & Biases</a>
+  # job: Technical Writer
+  bio: Technical Content Creator
   email: angelica.s.pan@gmail.com
 
 # Contact links
@@ -19,7 +19,6 @@ author:
 #     link: https://facebook.com/
 #   - name: Instagram
 #     link: https://instagram.com/
-
 
 # Comment Section (Disqus)
 # disqus-identifier: mr-brown # add your shortname for Disqus Comment. For example mr-brown
@@ -50,11 +49,13 @@ collections:
     output: true
     permalink: /:collection/:name/
     order:
+      - whisper.md
+      - ml-models.md
+      - dance-diffusion.md
       - pcibex.md
-      - handout.md
       - quickstart.md
       - practical.md
-
+      - handout.md
 
 # Tags
 tag_page_dir:         tag
@@ -64,7 +65,6 @@ tag_permalink_style:  pretty
 sass:
   sass_dir: _sass
   style: compressed
-
 
 # Exclude from processing.
 exclude:

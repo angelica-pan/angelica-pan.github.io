@@ -5,7 +5,8 @@ parent: Portfolio
 thumbnail: /assets/img/tidyverse-quickstart.png
 related_file: /assets/html/tidyverse-quickstart.html
 related_html: true
-blurb: A quickstart guide to data manipulation in the tidyverse.
+blurb: A quickstart guide to the R tidyverse package.
+date: January 2020
 ---
 
 ## Description
@@ -18,7 +19,3 @@ for data science.
 The guide provides readers with the essential information to get started
 on data manipulation with tidyverse packages. It's followed by the
 [Practical Tidyverse](/portfolio/tidyverse-practical).
-
-## Tools used
-
-R, R Markdown
