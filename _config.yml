@@ -48,14 +48,6 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:name/
-    order:
-      - whisper.md
-      - ml-models.md
-      - dance-diffusion.md
-      - pcibex.md
-      - tidyverse-quickstart.md
-      - tidyverse-practical.md
-      - syntax-handout.md
 
 # Tags
 tag_page_dir:         tag

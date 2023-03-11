@@ -5,7 +5,8 @@ permalink: /portfolio/
 ---
 
 <div class="container" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
-  {% for item in site.portfolio %}
+  {% assign sorted = site.portfolio | sort: "date" | reverse %}
+  {% for item in sorted %}
   <a href="{{ item.url | prepend: site.baseurl }}">
   <div class="portfolio-item">
     <div class="portfolio-thumbnail">
