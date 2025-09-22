@@ -50,9 +50,6 @@
 /* :: 3.4 Footer */
 @import '3-modules/footer';
 
-/* :: custom css for breadcrumb nav */
-@import '3-modules/breadcrumb-nav';
-
 
 /* ============== :: 4 Layouts ============== */
 /* :: 4.1 Article */
@@ -66,6 +63,3 @@
 
 /* :: 4.4 Tag Page */
 @import '4-layouts/tag-page';
-
-/* :: custom css for portfolio page */
-@import '4-layouts/portfolio';

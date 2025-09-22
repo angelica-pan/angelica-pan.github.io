@@ -1,25 +1,37 @@
 <div class="container-full">
   <!-- begin header -->
   <header class="header">
+
+    <div class="logo">
+      <a class="logo__link" href="{{ site.baseurl }}/">
+      {%if site.logo %}
+        <img class="logo__image" src="{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }}">
+      {% else %}
+        {{ site.author.name }}
+      {% endif %}
+      </a>
+    </div>
+
     <nav class="main-nav">
       <span class="main-nav__open">menu</span>
+
       <div class="main-nav__box">
         <span class="main-nav__close">Close</span>
+
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a href="{{site.baseurl}}/" class="nav__link {%if page.url == '/' %} active{% endif %}"><b>Home</b></a>
+            <a href="{{ site.baseurl }}/" class="nav__link {% if page.id == 'index' %}active{% endif %}">Home</a>
           </li>
+
           {% for item in site.pages %}
             {% unless item.name == 'tags.html' or item.name == '404.html' %}
-            {% if item.title %}
-            <li class="nav__item">
-              {% if item.open_new_tab %}
-                <a href="{{ item.open_new_tab | prepend: site.baseurl }}" target="_blank" class="nav__link">{{ item.title }}</a>
-              {% else %}
-                <a href="{{ item.url | prepend: site.baseurl }}" class="nav__link {%if item.url == page.url %} active{% endif %}">{{ item.title }}</a>
+              {% if item.title %}
+              <li class="nav__item">
+                <a href="{{ item.url | prepend: site.baseurl }}" class="nav__link {% if item.url == page.url or item.title == page.parent %}active{% endif %}">
+                  {{ item.title }}
+                </a>
+              </li>
               {% endif %}
-            </li>
-            {% endif %}
             {% endunless %}
           {% endfor %}
         </ul>

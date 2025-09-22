@@ -5,19 +5,27 @@ permalink: /portfolio/
 ---
 
 <div class="container" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
-  {% assign sorted = site.portfolio | sort: "date" | reverse %}
+  {% assign sorted = site.portfolio | sort: "order" %}
   {% for item in sorted %}
-  <a href="{{ item.url | prepend: site.baseurl }}">
-  <div class="portfolio-item">
-    <div class="portfolio-thumbnail">
-      <img src="{{ item.thumbnail | prepend: site.baseurl }}" alt="{{ item.title }}" class="portfolio-border">
+  <div class="article">
+    {% if item.image %}
+    <div class="article__image-box">
+      <a href="{{item.url | prepend: site.baseurl}}" class="article__image" style="background-image: url({{site.baseurl}}{{item.image}})"></a>
     </div>
-    <div class="portfolio-text">
-      <h2 class="portfolio-title"><b>{{ item.title }}</b></h2>
-      <h5 class="post__date"><i>{{ item.date | date: "%B %Y" }}</i></h5>
-      <p>{{ item.blurb }}</p>
+    {% endif %}
+    <div class="article__content">
+      <h1 class="article__title">
+        <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+      </h1>
+      <div class="article__meta">
+        <span class="article__date">
+          <time datetime="{{ item.start_date | date_to_xmlschema }}">{% assign date_format = "%B %Y" %}{{ item.start_date | start_date: date_format }}</time> - {{ item.end_date }}
+        </span>
+      </div>
+      <p class="article__excerpt">
+          {% if item.description %}{{ item.description }}{% else %}{{ item.content | strip_html | truncate: 130 }}{% endif %}
+      </p>
     </div>
   </div>
-  </a>
   {% endfor %}
 </div>

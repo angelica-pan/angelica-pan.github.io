@@ -2,6 +2,9 @@
 .article {
   display: flex;
   margin-bottom: 50px;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .article__image-box {
@@ -14,32 +17,41 @@
 
 .article__image {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $gray-white;
+  border: 2px dashed $primary-color;
 }
 
 .article__title {
   margin: 0;
   a {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 550;
     line-height: 38px;
-    color: $gray;
-    &:hover {
-      color: $primary-color;
-    }
+    color: $primary-color;
+  }
+}
+
+.article__title {
+  margin: 0;
+  a {
+    font-size: 30px;
+    font-weight: 550;
+    line-height: 38px;
+    color: $primary-color;
   }
 }
 
 .article__meta {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
+  font-style: italic;
   line-height: 20px;
   text-transform: uppercase;
   color: $gray-dark;
@@ -59,6 +71,3 @@
   text-decoration: underline;
   color: $primary-color;
 }
-
-
-

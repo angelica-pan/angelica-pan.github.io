@@ -1,0 +1,23 @@
+<div class="container">
+  <!-- begin footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+    <div class="footer__inner">
+      <div class="contact">
+        <div class="contact__title">Let's get in touch!</div>
+        <ul class="contact__list list-reset">
+          <!-- {% for contact in site.contact %}
+          <li class="contact__item">
+            <a class="contact__link" href="{{contact.link}}">{{contact.name}}</a>
+          </li>
+          {% endfor %} -->
+          {% for contact in site.contact %}
+            <a href="{{contact.link}}" class="contact__item">
+              <img src="{{contact.icon}}" height="30" width="30">
+            </a>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+</div>

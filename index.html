@@ -1,0 +1,32 @@
+---
+layout: default
+id: index
+---
+
+<div class="container">
+  <!-- begin author -->
+  <!-- <section class="author" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+    <div class="author__inner">
+      <img src="{{site.baseurl}}{{site.author.image}}" alt="{{site.author.name}}" class="author__img">
+      <h1 class="author__name">{{ site.author.name }}</h1>
+      <p class="author__bio">{{ site.author.bio }}</p>
+      <div class="author__more">
+        <a href="{{site.baseurl}}/portfolio/" class="say-hello">See my portfolio</a>
+      </div>
+    </div>
+  </section> -->
+  <section class="author">
+    <div class="author__inner">
+      <img src="{{site.baseurl}}{{site.author.image}}" alt="{{site.author.name}}" class="author__img"  data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+      <div data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
+        <h1 class="author__name">{{ site.author.name }}</h1>
+        <p class="author__job">{{ site.author.job }}</p>
+        <p class="author__bio">{{ site.author.bio }}</p>
+        <div class="author__more">
+          <a href="{{site.baseurl}}/portfolio/" class="see-more">See my portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end author -->
+</div>

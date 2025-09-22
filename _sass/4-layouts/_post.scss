@@ -1,6 +1,6 @@
 /* Post */
 .post {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 80px;
   @media (max-width: $mobile) {
     margin-top: 50px;
@@ -12,21 +12,34 @@
   text-align: center;
 }
 
-.post__title {
-  margin-bottom: $sp-2;
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 55px;
+.post__breadcrumb {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
 }
 
-.post__date {
-  margin-top: $sp-1;
-  margin-bottom: $sp-1;
-  // margin-bottom: 30px;
+.post__title {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.post__blurb {
+  font-size: 18px;
+  font-style: italic;
+  color: $gray-dark;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $gray-lighten;
+}
+
+.post__about {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   text-transform: uppercase;
   color: $gray-dark;
+  margin-bottom: 30px;
 }
 
 .post-image {
@@ -43,21 +56,18 @@
 }
 
 .post__content {
-  margin-top: 30px;
   margin-bottom: 45px;
+  font-size: 18px;
   p {
-    font-size: $prose-font-size;
-    line-height: 1.5;
-    color: $grey-dk-200;
+    line-height: 32px;
+    
     img {
       margin: 30px 0;
     }
   }
   ul li,
   ol li {
-    font-size: $prose-font-size;
-    color: $grey-dk-200;
-    margin-bottom: $sp-2;
+    margin-bottom: 15px;
   }
 }
 
@@ -86,6 +96,7 @@
       visibility: visible;
       opacity: 1;
       transition: opacity 150ms ease-out, visibility 0ms 0ms linear, transform 100ms ease-out;
+      background-color: rgba(107, 105, 250, 0.8);
     }
     .next__post-icon svg,
     .prev__post-icon svg {
@@ -100,8 +111,6 @@
   .post__nav-wrapper {
     left: 0;
     transform: translate3d(-30px,-50%,0);
-    width: 200px;
-    background-color: rgba(107, 105, 250, 0.8);
   }
   &:hover {
     .post__nav-wrapper {
@@ -127,6 +136,7 @@
     text-align: left;
     padding-left: 15px;
     padding-right: 0;
+    color: white;
   }
 }
 
@@ -135,8 +145,6 @@
   .post__nav-wrapper {
     right: 0;
     transform: translate3d(30px,-50%,0);
-    width: 200px;
-    background-color: rgba(107, 105, 250, 0.8);
   }
   &:hover {
     .post__nav-wrapper {
@@ -161,6 +169,7 @@
     text-align: right;
     padding-right: 15px;
     padding-left: 0;
+    color: white;
   }
 }
 
